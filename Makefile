@@ -61,7 +61,7 @@ LIB_SHARE = libarduino.so
 LIB = $(LIB_STATIC) $(LIB_SHARE)
 
 all: $(LIB)
-	make -C sample/
+	make -C samples/
 
 
 $(LIB): $(OBJS)
@@ -70,5 +70,6 @@ $(LIB): $(OBJS)
 
 clean:
 	rm -f $(LIB_STATIC) $(LIB_SHARE) $(OBJS)
+	make -C samples/ clean
 
 

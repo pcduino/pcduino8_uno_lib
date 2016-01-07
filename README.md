@@ -31,7 +31,7 @@ make
 
 ### Create new test program
 
-Create new .c files in sample folder and modify Makefile to compile it. For example I want to create helloLibArduino.c to control an LED on GPIO1.
+Create new .c files in sample folder and modify Makefile to compile it. For example I want to create helloLibArduino.c to control the LED1 on GPIO13.
 ```C
 #include <core.h>
 int led_pin = 1;

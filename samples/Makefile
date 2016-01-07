@@ -16,9 +16,10 @@ INCS = -I.\
 	-I$(DIR)/libraries/PN532_SPI 
 
 LIBS=../libarduino.a
-TARGET=./output
+TARGET=../output
 
 OBJS = i2c_rtc_test spi_nfc_test adc_test led_test
+OBJS += uart_test
 all: 
 	@mkdir -p $(TARGET)
 	@for i in $(OBJS); do echo "$(CXX) $(INCS) $$i.c -o $(TARGET)/$$i $(LIBS)" && $(CXX) $(INCS) $$i.c -o $(TARGET)/$$i $(LIBS); done
